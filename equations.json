@@ -1,0 +1,83 @@
+{"equations": [
+    {
+        "name": "Area of a circle",
+        "latex": "A=\\pi r^2",
+        "description": "Where \\(A\\) is the area and \\(r\\) is the radius",
+        "tags": ["area", "circle", "radius"]
+    }, {
+        "name": "Perimeter of a circle",
+        "latex": "p=2\\pi r =\\pi d",
+        "description": "Where \\(p\\) is the perimeter, \\(r\\) is the radius and \\(d\\) is the diameter",
+        "tags": ["perimeter", "circle", "radius"]
+    }, {
+        "name": "Volume of a sphere",
+        "latex": "V = \\frac{4}{3}\\pi r^3",
+        "description": "Where \\(V\\) is the volume and \\(r\\) is the radius",
+        "tags": ["volume", "sphere", "radius"]
+    }, {
+        "name": "Surface Area of a sphere",
+        "latex": "A=4 \\pi r^2",
+        "description": "Where \\(A\\) is the area and \\(r\\) is the radius",
+        "tags": ["surface", "area", "sphere", "radius"]
+    }, {
+        "name": "Volume of a pyramid",
+        "latex": "V = \\frac{1}{3}\\times \\text{base} \\times \\text{height}",
+        "description": "Where \\(V\\) is the volume.",
+        "tags": ["volume", "pyramid", "base", "height"]
+    }, {
+        "name": "Volume of a cone",
+        "latex": "V = \\frac{1}{3}\\pi r^2 \\times \\text{height}",
+        "description": "Where \\(V\\) is the volume and \\(r\\) is the radius of the base.",
+        "tags": ["volume", "cone", "base", "height"]
+    }, {
+        "name": "Curved surface area of a cone",
+        "latex": "A = \\pi rl",
+        "description": "Where \\(A\\) is the area, \\(r\\) is the radius and \\(l\\) is the slant height",
+        "tags": ["surface", "area", "cone", "radius", "slant"]
+    }, {
+        "name": "Pythagoras",
+        "latex": "a^2 + b^2 = c^2",
+        "description": "Where \\(c\\) is the length of the hypotenuse, and \\(a\\) and \\(b\\) are the adjacent sides.",
+        "tags": ["triangle", "hypotenuse", "length"]
+    }, {
+        "name": "Sine, Cosine, Tangent",
+        "latex": "\\sin\\theta = \\frac{O}{H}, \\cos\\theta = \\frac{A}{H}, \\tan\\theta = \\frac{O}{A}",
+        "description": "Where \\(H\\) is the hypotenuse, \\(A\\) is the adjacent side to, and \\(O\\) is the opposite side to the angle \\(\\theta\\)",
+        "tags": ["trigonometry", "triangle", "length", "angle"]
+    }, {
+        "name": "Inverse Sine, Cosine, Tangent",
+        "latex": "\\sin^{-1}(\\sin\\theta) = \\theta,\\cos^{-1}(\\cos\\theta) = \\theta, \\tan^{-1}(\\tan\\theta) = \\theta",
+        "description": "Where \\(\\theta\\) is the subject angle. In other words, the inverse of a function does the reverse of the original.",
+        "tags": ["trigonometry", "triangle", "inverse", "angle"]
+    }, {
+        "name": "The product of values of a common base is the base to the sum of the values",
+        "latex": "a^b\\times a^c = a^{b+c}\\therefore \\frac{a^b}{a^c}=a^{b-c}",
+        "description": "",
+        "tags": ["power", "rule"]
+    }, {
+        "name": "The nth root is the inverse power",
+        "latex": "\\sqrt[n]{a}=a^{\\frac{1}{n}}",
+        "description": "",
+        "tags": ["power", "rule", "root"]
+    }, {
+        "name": "Anything to the zero is one",
+        "latex": "a^0=1",
+        "description": "",
+        "tags": ["power", "rule", "zero"]
+    }, {
+        "name": "Powers of powers are equal to the product of the powers",
+        "latex": "\\left(x^a\\right)^b=x^{ab}",
+        "description": "",
+        "tags": ["power", "rule"]
+    }, {
+        "name": "Fractional powers",
+        "latex": "x^{\\frac{a}{b}}=\\sqrt[b]{x}^a=\\sqrt[b]{x^a}",
+        "description": "",
+        "tags": ["power", "rule"]
+    }, {
+        "name": "Volume of a frustum",
+        "latex": "V=\\text{volume of larger pyramid}-\\text{volume of smaller pyramid}",
+        "description": "Where \\(V\\) is the volume",
+        "tags": ["volume", "cone", "pyramid", "frustum"]
+    }
+]}
