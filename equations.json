@@ -85,7 +85,7 @@
         "description": "Where the second term in the brackets is the negative of the \\(x\\) of the turning point, and the constant term on the end is the \\(y\\)",
         "tags": ["quadratic", "polynomial"]
     }, {
-        "name": "Qaudratic formula",
+        "name": "Quadratic formula",
         "latex": "x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}",
         "description": "Where the quadratic is of the form \\(ax^2+bx+c\\)",
         "tags": ["quadratic", "polynomial"]
