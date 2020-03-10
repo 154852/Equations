@@ -22,13 +22,15 @@
             <svg viewBox="0 0 100 100" preserveAspectRatio="none" id="background">
                 <polyline points="0,30 100,60 100,100 0,100" fill="rgb(240, 240, 240)"></polyline>
             </svg>
-            <div class="abs-center">
-                <input type="text" v-model="input" @input="search" @click="search" placeholder="Search for something, e.g: Circles" />
-                <div v-bind:style="{height: equations.length == 0 || focused != null? '0vh':'60vh'}" id="equations">
+            <div v-bind:class="{'abs-center': !listOpen, 'open': listOpen}" id="center">
+                <input type="text" v-model="input" @input="search" @click="search" placeholder="Search for something, e.g: Circles" id="search" />
+                <div id="equations" v-if="listOpen">
                     <transition-group name="expand">
                         <div class="equation-preview" v-for="eqn of equations" @click="focus(eqn)" v-bind:key="eqn.id">
-                            <span v-html="eqn.latex"></span>
-                            <span>: {{eqn.name}}</span>
+                            <div>
+                                <span>{{eqn.name}} :</span>
+                                <span v-html="eqn.latex"></span>
+                            </div>
                         </div>
                     </transition-group>
                 </div>

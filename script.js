@@ -23,6 +23,11 @@ const vue = new Vue({
                 renderMathInElement(document.body);
             });
         }
+    },
+    computed: {
+        listOpen: function() {
+            return this.equations.length != 0 && this.focused == null;
+        }
     }
 });
 
@@ -45,6 +50,8 @@ axios.get("./equations.json").then((response) => {
             name: "tags",
             weight: 0.9
         }],
-        threshold: 0.1
+        threshold: 0.1,
+        shouldSort: true,
+        minMatchCharLength: 2
     });
 });

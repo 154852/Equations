@@ -61,15 +61,19 @@ input:focus {
 }
 
 .equation-preview {
+    padding-top: 20px;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.equation-preview > div {
     background-color: white;
     padding: 10px 10px;
-    margin-top: 20px;
     border-radius: 5px;
     box-shadow: rgba(200, 200, 200, 0.5) 0 0 10px 0;
     cursor: pointer;
     box-sizing: border-box;
-    width: 90%;
-    margin-left: 5%;
+    overflow: hidden;
 }
 
 .equation-preview:hover {
@@ -83,6 +87,7 @@ input:focus {
 .equation-preview .katex-display {
     display: inline-block;
     margin: 0;
+    color: rgb(151, 151, 151);
 }
 
 #focus {
@@ -112,7 +117,7 @@ hr {
 .equation-preview {
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
     display: inline-block;
-    position: relative;
+    /* position: relative; */
 }
 
 .expand-leave-active {
@@ -124,7 +129,46 @@ hr {
     transform: translateY(30px);
 }
 
+#equations {
+    position: relative;
+    z-index: 5;
+}
+
 #equations, #detail {
     overflow-y: scroll;
     transition: height ease-out 0.3s;
+}
+
+#center.open {
+    display: flex;
+    flex-direction: column;
+}
+
+#center {
+    max-height: 100vh;
+}
+
+#center.open #equations {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+}
+
+#search {
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+#center.open #search {
+    flex-basis: auto;
+}
+
+@media only screen and (max-width: 700px) {
+    body {
+        font-size: 70%;
+    }
+
+    .equation-preview {
+        padding-top: 10px;
+    }
 }

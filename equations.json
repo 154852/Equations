@@ -5,10 +5,10 @@
         "description": "Where \\(A\\) is the area and \\(r\\) is the radius",
         "tags": ["area", "circle", "radius"]
     }, {
-        "name": "Perimeter of a circle",
+        "name": "Circumference of a circle",
         "latex": "p=2\\pi r =\\pi d",
         "description": "Where \\(p\\) is the perimeter, \\(r\\) is the radius and \\(d\\) is the diameter",
-        "tags": ["perimeter", "circle", "radius"]
+        "tags": ["circumference", "perimeter", "circle", "radius"]
     }, {
         "name": "Volume of a sphere",
         "latex": "V = \\frac{4}{3}\\pi r^3",
