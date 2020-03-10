@@ -4,20 +4,7 @@ body, #app {
     height: 100%;
 }
 
-.abs-center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    margin: 0;
-    width: 100%;
-}
-
-#background {
+.fill {
     position: absolute;
     top: 0;
     left: 0;
@@ -26,8 +13,14 @@ body, #app {
     display: block;
 }
 
+#logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    margin: 0;
+}
+
 input {
-    position: relative;
     font: inherit;
     width: 90%;
     padding: 10px 10px;
@@ -43,12 +36,6 @@ input {
     font-size: 200%;
     box-sizing: border-box;
     border-radius: 5px;
-
-    transition: 0.05s linear;
-    -webkit-transition: 0.05s linear;
-    -moz-transition: 0.05s linear;
-    -ms-transition: 0.05s linear;
-    -o-transition: 0.05s linear;
 }
 
 input::placeholder {
@@ -61,9 +48,10 @@ input:focus {
 }
 
 .equation-preview {
-    padding-top: 20px;
+    padding-top: 10px;
     width: 90%;
     margin-left: 5%;
+    padding-bottom: 10px;
 }
 
 .equation-preview > div {
@@ -90,23 +78,6 @@ input:focus {
     color: rgb(151, 151, 151);
 }
 
-#focus {
-    background-color: white;
-    border-radius: 5px;
-    padding: 10px 10px;
-    box-sizing: border-box;
-    box-shadow: rgba(200, 200, 200, 0.5) 0 0 10px 0;
-
-    text-align: center;
-    margin: 0 auto;
-    margin-top: 10px;
-    width: 90%;
-}
-
-#focus .katex-display {
-    margin: 0;
-}
-
 hr {
     height: 1px;
     background-color: lightgray;
@@ -114,53 +85,93 @@ hr {
     width: 80%;
 }
 
-.equation-preview {
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-    display: inline-block;
-    /* position: relative; */
+.abs-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    margin: 0;
+    width: 100%;
 }
 
-.expand-leave-active {
-    position: absolute;
+#search {
+    position: fixed;
+    margin-left: 5%;
+
+    transition: background-color 0.05s linear, box-shadow 0.05s linear, bottom 0.3s ease;
+
+    height: 50px;
+}
+
+.empty #search {
+    bottom: 47%;
+}
+
+.searching #search {
+    bottom: 90%;
+}
+
+.focused #search {
+    bottom: 60%;
+}
+
+#equations {
+    position: fixed;
+    left: 5%;
+    width: 90%;
+    height: calc(89vh);
+    transition: top 0.3s ease;
+    overflow-y: scroll;
+}
+
+.empty #equations {
+    top: 100%;
+}
+
+.searching #equations {
+    top: 11%;
+}
+
+.focused #equations {
+    top: 100%;
+}
+
+#focus {
+    position: fixed;
+    left: 5%;
+    top: 100%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    box-shadow: rgba(200, 200, 200, 0.5) 0 0 10px 0;
+
+    transition: top 0.3s ease;
+
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 90%;
+}
+
+.focused #focus {
+    top: 40%;
+}
+
+#focus .katex-display {
+    margin: 0;
+}
+
+.expand-leave-active, .expand-enter-active {
+    transition: opacity 0.2s ease-out;
 }
 
 .expand-enter, .expand-leave-to {
     opacity: 0;
-    transform: translateY(30px);
-}
-
-#equations {
-    position: relative;
-    z-index: 5;
-}
-
-#equations, #detail {
-    overflow-y: scroll;
-    transition: height ease-out 0.3s;
-}
-
-#center.open {
-    display: flex;
-    flex-direction: column;
-}
-
-#center {
-    max-height: 100vh;
-}
-
-#center.open #equations {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    box-sizing: border-box;
-}
-
-#search {
-    margin-bottom: 10px;
-    margin-top: 20px;
-}
-
-#center.open #search {
-    flex-basis: auto;
 }
 
 @media only screen and (max-width: 700px) {
@@ -171,4 +182,21 @@ hr {
     .equation-preview {
         padding-top: 10px;
     }
+}
+
+.truncate {
+    text-overflow: ellipsis;
+    width: 500px;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+a {
+    color: rgb(77, 77, 77);
+}
+
+a:visited {
+    color: rgb(126, 126, 126);
 }

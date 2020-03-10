@@ -19,12 +19,13 @@
     </head>
     <body>
         <div id="app">
-            <svg viewBox="0 0 100 100" preserveAspectRatio="none" id="background">
+            <p id="logo">Every Equation</p>
+            <svg viewBox="0 0 100 100" preserveAspectRatio="none" class="fill">
                 <polyline points="0,30 100,60 100,100 0,100" fill="rgb(240, 240, 240)"></polyline>
             </svg>
-            <div v-bind:class="{'abs-center': !listOpen, 'open': listOpen}" id="center">
-                <input type="text" v-model="input" @input="search" @click="search" placeholder="Search for something, e.g: Circles" id="search" />
-                <div id="equations" v-if="listOpen">
+            <div v-bind:class="{'empty': !listOpen && focused == null, 'searching': listOpen, 'focused': focused != null}">
+                <input type="text" v-model="input" @input="search" @click="focused = null" placeholder="Search for something, e.g: Circles" id="search" />
+                <div id="equations">
                     <transition-group name="expand">
                         <div class="equation-preview" v-for="eqn of equations" @click="focus(eqn)" v-bind:key="eqn.id">
                             <div>
@@ -34,13 +35,17 @@
                         </div>
                     </transition-group>
                 </div>
-                <div v-bind:style="{height: focused == null? '0vh':'30vh'}" id="detail">
-                    <div id="focus">
-                        <h2 style="margin-top: 0">{{focused == null? "":focused.name}}</h2>
+                <div id="focus">
+                    <h2 style="margin-top: 0" v-html="focused == null? '':focused.name"></h2>
+                    <hr />
+                    <div v-html="focused == null? '':focused.latex"></div>
+                    <div v-if="focused != null && focused.description != ''">
                         <hr />
-                        <div v-html="focused == null? '':focused.latex"></div>
+                        <p style="margin-bottom: 0" v-html="focused.description"></p>
+                    </div>
+                    <div v-if="focused != null && focused.proof != null">
                         <hr />
-                        <p style="margin-bottom: 0">{{focused == null? "":focused.description}}</p>
+                        <p>Proof: <a v-bind:href="focused.proof" class="truncate">{{focused.proof}}</a></p>
                     </div>
                 </div>
             </div>

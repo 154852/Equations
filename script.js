@@ -4,29 +4,41 @@ const vue = new Vue({
     data: {
         equations: [],
         input: "",
-        focused: null
+        focused: null,
+        transitioning: false,
+        sort: [],
+        timeout: null
     },
     methods: {
         search: function() {
-            let search = fuse.search(vue.input);;
-            let toRemove = vue.equations.filter((x) => search.find((y) => y.id == x.id) == null);
-            let toAdd = search.filter((x) => vue.equations.find((y) => y.id == x.id) == null);
-            toAdd.forEach((x) => vue.equations.splice(0, 0, x));
-            toRemove.forEach((eqn) => {
-                vue.equations.splice(vue.equations.findIndex((x) => x.id == eqn.id), 1);
-            });
             vue.focused = null;
+            vue.sort = fuse.search(vue.input);
+            
+            vue.equations.splice(0, vue.equations.length);
+            if (vue.sort.length == 0) return;
+            
+            if (vue.transitioning) clearTimeout(vue.timeout);
+            else vue.transitioning = true;
+
+            Vue.nextTick().then(function() {
+                vue.timeout = setTimeout(() => {
+                    vue.transitioning = false;
+                    vue.equations.push(...vue.sort);
+                }, 200);
+            });
         },
         focus: function(eqn) {
+            document.body.classList.add("hide");
             vue.focused = eqn;
             Vue.nextTick().then(function() {
                 renderMathInElement(document.body);
+                document.body.classList.remove("hide");
             });
         }
     },
     computed: {
         listOpen: function() {
-            return this.equations.length != 0 && this.focused == null;
+            return (this.equations.length != 0 || this.transitioning) && this.focused == null;
         }
     }
 });
@@ -40,6 +52,7 @@ axios.get("./equations.json").then((response) => {
             throwOnError: false
         });
         equation.id = id;
+        equation.tags.push("all");
     });
 
     fuse = new Fuse(equations, {
