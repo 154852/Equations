@@ -79,5 +79,15 @@
         "latex": "V=\\text{volume of larger pyramid}-\\text{volume of smaller pyramid}",
         "description": "Where \\(V\\) is the volume",
         "tags": ["volume", "cone", "pyramid", "frustum"]
+    }, {
+        "name": "Completing the square",
+        "latex": "ax^2 + bx + c \\equiv \\left(ax + \\frac{b}{2}\\right)^2 - \\frac{b^2}{4}+c",
+        "description": "Where the second term in the brackets is the negative of the \\(x\\) of the turning point, and the constant term on the end is the \\(y\\)",
+        "tags": ["quadratic", "polynomial"]
+    }, {
+        "name": "Qaudratic formula",
+        "latex": "x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}",
+        "description": "Where the quadratic is of the form \\(ax^2+bx+c\\)",
+        "tags": ["quadratic", "polynomial"]
     }
 ]}
