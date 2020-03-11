@@ -14,7 +14,7 @@ body, #app {
 }
 
 #logo {
-    position: absolute;
+    position: fixed;
     top: 10px;
     left: 10px;
     margin: 0;
@@ -22,6 +22,7 @@ body, #app {
 }
 
 input {
+    -webkit-appearance: none;
     font: inherit;
     width: 90%;
     padding: 10px 10px;
@@ -104,6 +105,10 @@ hr {
     margin-left: 5%;
 
     transition: background-color 0.05s linear, box-shadow 0.05s linear, bottom 0.3s ease;
+    -webkit-transition: background-color 0.05s linear, box-shadow 0.05s linear, bottom 0.3s ease;
+    -moz-transition: background-color 0.05s linear, box-shadow 0.05s linear, bottom 0.3s ease;
+    -ms-transition: background-color 0.05s linear, box-shadow 0.05s linear, bottom 0.3s ease;
+    -o-transition: background-color 0.05s linear, box-shadow 0.05s linear, bottom 0.3s ease;
 
     height: 50px;
 }
@@ -125,8 +130,13 @@ hr {
     left: 5%;
     width: 90%;
     height: calc(89vh);
-    transition: top 0.3s ease;
     overflow-y: scroll;
+
+    transition: top 0.3s ease;
+    -webkit-transition: top 0.3s ease;
+    -moz-transition: top 0.3s ease;
+    -ms-transition: top 0.3s ease;
+    -o-transition: top 0.3s ease;
 }
 
 .empty #equations {
@@ -151,12 +161,16 @@ hr {
     box-sizing: border-box;
     box-shadow: rgba(200, 200, 200, 0.5) 0 0 10px 0;
 
-    transition: top 0.3s ease;
-
     text-align: center;
     margin: 0 auto;
     margin-top: 10px;
     width: 90%;
+
+    transition: top 0.3s ease;
+    -webkit-transition: top 0.3s ease;
+    -moz-transition: top 0.3s ease;
+    -ms-transition: top 0.3s ease;
+    -o-transition: top 0.3s ease;
 }
 
 .focused #focus {

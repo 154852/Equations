@@ -1,3 +1,30 @@
+let mobile = false;
+document.body.classList.add("desktop");
+window.addEventListener("touchstart", () => {
+    if (!mobile) {
+        mobile = true;
+        document.body.classList.remove("desktop");
+        document.body.classList.add("mobile");
+    }
+});
+
+function smoothScroll(to, millis) {
+    let startS = window.scrollY;
+    let startT = Date.now();
+    
+    let interval = setInterval(() => {
+        let now = Date.now();
+        if (now > startT + millis) {
+            window.scrollTo(0, to);
+            clearInterval(interval);
+            return;
+        }
+
+        let elapsed = (now - startT) / millis;
+        window.scrollTo(0, ((to - startS) * elapsed) + startS);
+    }, 3);
+}
+
 let fuse, equations;
 const vue = new Vue({
     el: "#app",
@@ -13,9 +40,13 @@ const vue = new Vue({
         search: function() {
             vue.focused = null;
             vue.sort = fuse.search(vue.input);
+            window.location.hash = "";
             
             vue.equations.splice(0, vue.equations.length);
-            if (vue.sort.length == 0) return;
+            if (vue.sort.length == 0) {
+                if (mobile) smoothScroll(window.innerHeight * 0.3, 300);
+                return;
+            }
             
             if (vue.transitioning) clearTimeout(vue.timeout);
             else vue.transitioning = true;
@@ -26,13 +57,14 @@ const vue = new Vue({
                     vue.equations.push(...vue.sort);
                 }, 200);
             });
+
+            if (mobile) smoothScroll(0, 300);
         },
         focus: function(eqn) {
-            document.body.classList.add("hide");
             vue.focused = eqn;
+            window.location.hash = eqn.id;
             Vue.nextTick().then(function() {
                 renderMathInElement(document.body);
-                document.body.classList.remove("hide");
             });
         }
     },
@@ -54,6 +86,8 @@ axios.get("./equations.json").then((response) => {
         equation.id = id;
         equation.tags.push("all");
     });
+
+    if (window.location.hash != "") vue.focus(equations[parseInt(window.location.hash.slice(1))]);
 
     fuse = new Fuse(equations, {
         keys: [{

@@ -32,8 +32,8 @@
         "tags": ["math", "volume", "pyramid", "base", "height", "geometry"]
     }, {
         "name": "Volume of a cone",
-        "latex": "V = \\frac{1}{3}\\pi r^2 \\times \\text{height}",
-        "description": "Where \\(V\\) is the volume and \\(r\\) is the radius of the base.",
+        "latex": "V = \\frac{1}{3}\\pi r^2h",
+        "description": "Where \\(V\\) is the volume, \\(h\\) is the height, and \\(r\\) is the radius of the base.",
         "tags": ["math", "volume", "cone", "base", "height", "geometry"]
     }, {
         "name": "Curved surface area of a cone",
@@ -142,7 +142,7 @@
         "tags": ["math", "calculus", "integral", "area"]
     }, {
         "name": "Volume of a cylinder",
-        "latex": "2\\pi r^2h",
+        "latex": "\\pi r^2h",
         "description": "Where \\(V\\) is the volume, \\(r\\) is the radius of the base and \\(h\\) is the height.",
         "tags": ["math", "volume", "cylinder", "geometry"]
     }, {
@@ -206,13 +206,13 @@
         "description": "Where \\(y=mx+c\\)",
         "tags": ["math", "line", "geometry", "gradient"]
     }, {
-        "name": "Area of an sector",
+        "name": "Area of a sector",
         "latex": "A=\\frac{\\theta}{360}\\pi r^2",
         "description": "Where \\(A\\) is the area, \\(\\theta\\) is the sector angle and \\(r\\) is the radius",
         "tags": ["math", "area", "circle", "radius", "geometry", "sector"]
     }, {
-        "name": "Perimeter of an sector",
-        "latex": "p=\\frac{\\theta}{360}2\\pi r + 2r",
+        "name": "Perimeter of a sector",
+        "latex": "p=\\frac{2\\pi r\\theta}{360} + 2r",
         "description": "Where \\(p\\) is the perimeter, \\(\\theta\\) is the sector angle and \\(r\\) is the radius",
         "tags": ["math", "area", "circle", "radius", "geometry", "sector"]
     }, {
@@ -255,5 +255,143 @@
         "latex": "\\rho = \\frac{m}{V}",
         "description": "Where \\(\\rho\\) is the density, \\(m\\) is the mass and \\(V\\) is the volume.",
         "tags": ["math", "physics", "volume", "mass"]
+    }, 
+
+
+    {
+        "name": "Kinetic Energy",
+        "latex": "E_k=\\frac{1}{2}mv^2",
+        "description": "Where \\(E_k\\) is the kinetic energy of a body mass \\(m\\) and speed \\(v\\)",
+        "tags": ["physics", "energy"]
+    }, {
+        "name": "Gravitational Potential Energy",
+        "latex": "E_p=mgh",
+        "description": "Where \\(E_p\\) is the change in gravitational potential energy for a body of mass \\(m\\) in a gravitational field of strength \\(g\\) over a height \\(h\\)",
+        "tags": ["physics", "energy", "gravity"]
+    }, {
+        "name": "Power",
+        "latex": "P=\\frac{W}{t}=\\frac{E}{t}",
+        "description": "Where \\(P\\) is the power, \\(W\\) is the word done, \\(t\\) is the time elapsed and \\(E\\) is the energy",
+        "tags": ["physics", "energy", "work"]
+    }, {
+        "name": "Elastic potential energy",
+        "latex": "E_e=\\frac{1}{2}kx^2",
+        "description": "Where \\(E_e\\) is the elastic potential energy, \\(k\\) is the spring constant and \\(x\\) is the spring extension",
+        "tags": ["physics", "energy", "spring", "elastic"]
+    }, {
+        "name": "Thermal Energy Change",
+        "latex": "\\Delta E=mc\\Delta\\theta",
+        "description": "Where \\(\\Delta E\\) is the change in thermal energy of a mass \\(m\\), with a specific heat capacity \\(c\\) and temperature change of \\(\\Delta\\theta\\)",
+        "tags": ["physics", "energy", "thermal"]
+    }, {
+        "name": "Charge Flow",
+        "latex": "Q=It",
+        "description": "Where \\(Q\\) is the charge, \\(I\\) is the current and \\(t\\) is the time elapsed",
+        "tags": ["physics", "charge", "current", "electricity"]
+    }, {
+        "name": "Potential difference",
+        "latex": "V=IR",
+        "description": "Where \\(V\\) is the potential difference (voltage), \\(I\\) is the current and \\(R\\) is the resistance",
+        "tags": ["physics", "voltage", "current", "electricity", "resistance"]
+    }, {
+        "name": "Potential difference",
+        "latex": "V=IR",
+        "description": "Where \\(V\\) is the potential difference (voltage), \\(I\\) is the current and \\(R\\) is the resistance",
+        "tags": ["physics", "voltage", "current", "electricity", "resistance", "potential difference"]
+    }, {
+        "name": "Total Resistance",
+        "latex": "R_t = R_1+R_2+\\dots+R_n",
+        "description": "Where \\(R_x\\) is the resistance of the xth branch and \\(R_t\\) is the total resistance",
+        "tags": ["physics", "electricity", "resistance"]
+    }, {
+        "name": "Electrical Power",
+        "latex": "P=IV",
+        "description": "Where \\(V\\) is the potential difference (voltage), \\(I\\) is the current and \\(P\\) is the power",
+        "tags": ["physics", "voltage", "current", "electricity", "power", "potential difference"]
+    }, {
+        "name": "Power 2",
+        "latex": "P=I^2R",
+        "description": "Where \\(R\\) is the resistance, \\(I\\) is the current and \\(P\\) is the power",
+        "tags": ["physics", "current", "electricity", "power"]
+    }, {
+        "name": "Energy Flow",
+        "latex": "E=QV",
+        "description": "Where \\(E\\) is the used energy, \\(Q\\) is the charge and \\(V\\) is the voltage.",
+        "tags": ["physics", "voltage", "energy", "charge", "electricity", "power", "potential difference"]
+    }, {
+        "name": "Thermal energy for state change",
+        "latex": "E=mL",
+        "description": "Where \\(m\\) is the mass of a body with specific latent heat \\(L\\)",
+        "tags": ["physics", "mass", "latent heat", "thermal"]
+    }, {
+        "name": "Gas pressure and volume",
+        "latex": "p\\propto \\frac{1}{V}",
+        "description": "Where \\(p\\) is the pressure and \\(V\\) is the volume",
+        "tags": ["physics", "gas", "pressure"]
+    }, {
+        "name": "Weight",
+        "latex": "W=mg",
+        "description": "Where \\(W\\) is the weight of a body of mass \\(m\\) in a gravitational field of strength \\(g\\)",
+        "tags": ["physics", "mass", "gravity", "force"]
+    }, {
+        "name": "Work done",
+        "latex": "E=Fs",
+        "description": "Where \\(F\\) is a force exerted over a distance \\(s\\)",
+        "tags": ["physics", "word", "energy", "distance"]
+    }, {
+        "name": "Spring force",
+        "latex": "F=kx",
+        "description": "Where \\(F\\) is a force exerted by a spring of extension \\(x\\) and spring constant \\(k\\)",
+        "tags": ["physics", "spring", "force"]
+    }, {
+        "name": "Moment of force",
+        "latex": "M=Fs",
+        "description": "Where \\(M\\) is the moment for a force \\(F\\) over a distance \\(s\\), perpendicular to the direction of the force",
+        "tags": ["physics", "moment", "force"]
+    }, {
+        "name": "Pressure",
+        "latex": "p=\\frac{F}{A}",
+        "description": "Where \\(p\\) is the pressure exerted by a (perpendicular) force \\(F\\) over an area \\(A\\)",
+        "tags": ["physics", "pressure", "force"]
+    }, {
+        "name": "Acceleration",
+        "latex": "a=\\frac{\\Delta v}{t}=\\frac{v-u}{t}",
+        "description": "Where \\(a\\) is the acceleration of a particle who's velocity changed by \\(\\Delta v\\) in a time \\(t\\)",
+        "tags": ["physics", "acceleration", "kinematics"]
+    }, {
+        "name": "Newton's second law of motion",
+        "latex": "F=ma=\\frac{m\\Delta v}{t}",
+        "description": "Where \\(F\\) is the force exrted by a particle of mass \\(m\\), of velocity \\(v\\) and an acceleration \\(a\\). For those with knowledge of calculus, this is generalised to, $$F=\\frac{\\mathrm d(mv)}{\\mathrm dt}$$",
+        "tags": ["physics", "force", "mass", "acceleration", "kinematics", "motion"]
+    }, {
+        "name": "Momentum",
+        "latex": "p=mv",
+        "description": "Where \\(p\\) is the momentum of a particle of mass \\(m\\) moving at a velocity \\(v\\)",
+        "tags": ["physics", "momentum", "mass", "velocity", "kinematics", "motion"]
+    }, {
+        "name": "Pressure in a liquid",
+        "latex": "p=h\\rho g",
+        "description": "Where \\(p\\) is the pressure at the height \\(h\\) in an incompressible liquid of density \\(\\rho\\) in a gravitational field of strength \\(g\\)",
+        "tags": ["physics", "pressure", "density"]
+    }, {
+        "name": "Wave speed",
+        "latex": "v=f\\lambda",
+        "description": "Where \\(v\\) is the speed of a wave with frequency \\(f\\) and wavelength \\(\\lambda\\)",
+        "tags": ["physics", "waves", "frequency", "wavelength"]
+    }, {
+        "name": "Force in a magnetic field",
+        "latex": "F=BIl",
+        "description": "Where \\(F\\) is the forced exerted by a magnetic field of strength \\(B\\) on a conductor of current \\(I\\) with a length \\(l\\) in the magnetic field",
+        "tags": ["physics", "force", "magnetism", "current"]
+    }, {
+        "name": "Coils and potential difference in electromagnetism",
+        "latex": "\\frac{V_p}{V_s}=\\frac{N_p}{N_s}",
+        "description": "Where \\(V_n, N_n\\) denote the potential difference across, and turns in coil \\(n\\) respectively",
+        "tags": ["physics", "coils", "magnetism", "voltage", "potential difference"]
+    }, {
+        "name": "Current and potential different across coils",
+        "latex": "V_pI_p=V_sI_s",
+        "description": "Where \\(V_n, I_n\\) denote the potential difference across, and current in coil \\(n\\) respectively",
+        "tags": ["physics", "magnetism", "voltage", "potential difference", "current"]
     }
 ]}

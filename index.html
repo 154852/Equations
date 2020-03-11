@@ -20,7 +20,7 @@
     <body>
         <div id="app">
             <p id="logo">Every Equation</p>
-            <svg viewBox="0 0 100 100" preserveAspectRatio="none" class="fill">
+            <svg viewBox="0 0 100 100" preserveAspectRatio="none" class="fill" style="position: fixed;">
                 <polyline points="0,30 100,60 100,100 0,100" fill="rgb(240, 240, 240)"></polyline>
             </svg>
             <div v-bind:class="{'empty': !listOpen && focused == null, 'searching': listOpen, 'focused': focused != null}">
