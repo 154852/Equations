@@ -3,42 +3,47 @@
         "name": "Area of a circle",
         "latex": "A=\\pi r^2",
         "description": "Where \\(A\\) is the area and \\(r\\) is the radius",
-        "tags": ["math", "area", "circle", "radius"],
+        "tags": ["math", "area", "circle", "radius", "geometry"],
         "proof": "https://www.basic-mathematics.com/proof-of-the-area-of-a-circle.html"
+    }, {
+        "name": "Area of a trapezium",
+        "latex": "A=\\frac{1}{2}(a+b)h",
+        "description": "Where \\(a, b\\) are the length of the parallel sides and \\(h\\) is the perpendicular height",
+        "tags": ["math", "area", "trapezium", "geometry"]
     }, {
         "name": "Circumference of a circle",
         "latex": "p=2\\pi r =\\pi d",
         "description": "Where \\(p\\) is the perimeter, \\(r\\) is the radius and \\(d\\) is the diameter",
-        "tags": ["math", "circumference", "perimeter", "circle", "radius"]
+        "tags": ["math", "circumference", "perimeter", "circle", "radius", "geometry"]
     }, {
         "name": "Volume of a sphere",
         "latex": "V = \\frac{4}{3}\\pi r^3",
         "description": "Where \\(V\\) is the volume and \\(r\\) is the radius",
-        "tags": ["math", "volume", "sphere", "radius"]
+        "tags": ["math", "volume", "sphere", "radius", "geometry"]
     }, {
         "name": "Surface Area of a sphere",
         "latex": "A=4 \\pi r^2",
         "description": "Where \\(A\\) is the area and \\(r\\) is the radius",
-        "tags": ["math", "surface", "area", "sphere", "radius"]
+        "tags": ["math", "surface", "area", "sphere", "radius", "geometry"]
     }, {
         "name": "Volume of a pyramid",
         "latex": "V = \\frac{1}{3}\\times \\text{base} \\times \\text{height}",
         "description": "Where \\(V\\) is the volume.",
-        "tags": ["math", "volume", "pyramid", "base", "height"]
+        "tags": ["math", "volume", "pyramid", "base", "height", "geometry"]
     }, {
         "name": "Volume of a cone",
         "latex": "V = \\frac{1}{3}\\pi r^2 \\times \\text{height}",
         "description": "Where \\(V\\) is the volume and \\(r\\) is the radius of the base.",
-        "tags": ["math", "volume", "cone", "base", "height"]
+        "tags": ["math", "volume", "cone", "base", "height", "geometry"]
     }, {
         "name": "Curved surface area of a cone",
         "latex": "A = \\pi rl",
         "description": "Where \\(A\\) is the area, \\(r\\) is the radius and \\(l\\) is the slant height",
-        "tags": ["math", "surface", "area", "cone", "radius", "slant"]
+        "tags": ["math", "surface", "area", "cone", "radius", "slant", "geometry"]
     }, {
         "name": "Pythagoras",
-        "latex": "a^2 + b^2 = c^2",
-        "description": "Where \\(c\\) is the length of the hypotenuse, and \\(a\\) and \\(b\\) are the adjacent sides.",
+        "latex": "a^2 + b^2 = c^2 \\therefore a^2+b^2+\\dots+n^2 = c^2",
+        "description": "Where \\(c\\) is the length of the hypotenuse, and \\(a, b, \\dots,n\\) are the adjacent sides.",
         "tags": ["math", "triangle", "hypotenuse", "length"]
     }, {
         "name": "Sine, Cosine, Tangent",
@@ -50,6 +55,21 @@
         "latex": "\\sin^{-1}(\\sin\\theta) = \\theta,\\cos^{-1}(\\cos\\theta) = \\theta, \\tan^{-1}(\\tan\\theta) = \\theta",
         "description": "Where \\(\\theta\\) is the subject angle. In other words, the inverse of a function does the reverse of the original.",
         "tags": ["math", "trigonometry", "triangle", "inverse", "angle"]
+    }, {
+        "name": "Sine rule",
+        "latex": "\\frac{a}{\\sin A}=\\frac{b}{\\sin B}=\\frac{c}{\\sin C}",
+        "description": "For any triangle of sides \\(a, b, c\\) and angles \\(A, B, C\\)",
+        "tags": ["math", "trigonometry", "triangle", "angle"]
+    }, {
+        "name": "Area of a triangle",
+        "latex": "A=\\frac{1}{2}bh = \\frac{1}{2}ab\\sin C",
+        "description": "For any triangle of base \\(b\\) and height \\(h\\), or of sides \\(a, b, c\\) and angles \\(A, B, C\\)",
+        "tags": ["math", "area", "trigonometry", "triangle", "angle", "geometry"]
+    }, {
+        "name": "Cosine rule",
+        "latex": "a^2=b^2+c^2-2bc\\cos A",
+        "description": "For any triangle of sides \\(a, b, c\\) and angles \\(A, B, C\\)",
+        "tags": ["math", "trigonometry", "triangle", "angle"]
     }, {
         "name": "The product of values of a common base is the base to the sum of the values",
         "latex": "a^b\\times a^c = a^{b+c}\\therefore \\frac{a^b}{a^c}=a^{b-c}",
@@ -79,7 +99,7 @@
         "name": "Volume of a frustum",
         "latex": "V=\\text{volume of larger pyramid}-\\text{volume of smaller pyramid}",
         "description": "Where \\(V\\) is the volume",
-        "tags": ["math", "volume", "cone", "pyramid", "frustum"]
+        "tags": ["math", "volume", "cone", "pyramid", "frustum", "geometry"]
     }, {
         "name": "Completing the square",
         "latex": "ax^2 + bx + c \\equiv \\left(ax + \\frac{b}{2}\\right)^2 - \\frac{b^2}{4}+c",
@@ -95,5 +115,145 @@
         "latex": "(a + b)^n={n\\choose 0}a^n+{n\\choose 1}a^{n-1}b^1+{n\\choose 2}a^{n-2}b^2+\\dots+{n\\choose n}b^n",
         "description": "Where \\({n \\choose k}\\), is the binomial coeffient, obtainable on a calculator through the \\(\\bold{c}\\) button. In generalised form, this equation becomes, $$(a+b)^n=\\sum^{n}_{k=0}\\binom{n}{k}a^{n-k}b^k$$",
         "tags": ["math", "binomial", "expansion"]
+    }, {
+        "name": "Derivative",
+        "latex": "\\frac{dy}{dx}=f'(x)=\\lim_{\\Delta x \\to 0} \\frac{f(x+\\Delta x)-f(x)}{\\Delta x}",
+        "description": "",
+        "tags": ["math", "calculus", "derivative"]
+    }, {
+        "name": "Derivative of a polynomial",
+        "latex": "\\frac{d\\left(ax^n\\right)}{dx}=anx^{n-1}",
+        "description": "Using the definition of a derivative and the binomial expansion",
+        "tags": ["math", "calculus", "derivative", "polynomial"]
+    }, {
+        "name": "Indefinite integral",
+        "latex": "\\int f'(x) \\mathrm dx=f(x)+c",
+        "description": "The integral of a function is also known as the antiderivative, and must end with \\(+c\\)",
+        "tags": ["math", "calculus", "integral"]
+    }, {
+        "name": "Integral of a polynomial",
+        "latex": "\\int ax^n \\mathrm dx =\\frac{a}{n+1}x^{n+1}+c",
+        "description": "",
+        "tags": ["math", "calculus", "integral", "polynomial"]
+    }, {
+        "name": "Definite integral",
+        "latex": "\\int_b^a f'(x) \\mathrm dx = [f(x)]^a_b = f(a) - f(b)",
+        "description": "Gives the area under the curve \\(f'(x)\\)",
+        "tags": ["math", "calculus", "integral", "area"]
+    }, {
+        "name": "Volume of a cylinder",
+        "latex": "2\\pi r^2h",
+        "description": "Where \\(V\\) is the volume, \\(r\\) is the radius of the base and \\(h\\) is the height.",
+        "tags": ["math", "volume", "cylinder", "geometry"]
+    }, {
+        "name": "Speed, distance, time",
+        "latex": "v = \\frac{s}{\\Delta t}",
+        "description": "Where \\(v\\) is the velocity, \\(s\\) is the displacement and \\(\\Delta t\\) is the time.",
+        "tags": ["math", "physics", "time", "classical", "kinematics"]
+    }, {
+        "name": "Compount interest",
+        "latex": "\\text{total}=s\\times i^y",
+        "description": "Where after after \\(y\\) years (months, or iterations), with a start value \\(s\\) and an interest rate \\(i\\), the total is \\(\\text{total}\\)",
+        "tags": ["math", "interest", "time"]
+    }, {
+        "name": "Or in probability",
+        "latex": "P(A \\text{ or } B)=P(A)+P(B)",
+        "description": "Where \\(P(X)\\) is the probability of \\(X\\) occuring",
+        "tags": ["math", "probability"]
+    }, {
+        "name": "And in probability",
+        "latex": "P(A \\text{ and } B)=P(A)\\times P(B)",
+        "description": "Where \\(P(X)\\) is the probability of \\(X\\) occuring",
+        "tags": ["math", "probability"]
+    }, {
+        "name": "Suvat 1",
+        "latex": "v = u+at",
+        "description": "Where \\(v\\) is the velocity at \\(t\\), \\(u\\) is the velocity at \\(t=0\\), \\(a\\) is the constant acceleration and \\(t\\) is the time.",
+        "tags": ["math", "physics", "time", "classical", "kinematics"]
+    }, {
+        "name": "Suvat 2",
+        "latex": "v^2 = u^2+2as",
+        "description": "Where \\(v\\) is the velocity at \\(t\\), \\(u\\) is the velocity at \\(t=0\\), \\(a\\) is the constant acceleration, \\(s\\) is the displacement and \\(t\\) is the time.",
+        "tags": ["math", "physics", "time", "classical", "kinematics"]
+    }, {
+        "name": "Suvat 3",
+        "latex": "s = ut+\\frac{1}{2}at^2",
+        "description": "Where \\(u\\) is the velocity at \\(t=0\\), \\(a\\) is the constant acceleration, \\(s\\) is the displacement, and \\(t\\) is the time.",
+        "tags": ["math", "physics", "time", "classical", "kinematics"]
+    }, {
+        "name": "Suvat 4",
+        "latex": "s = vt-\\frac{1}{2}at^2",
+        "description": "Where \\(v\\) is the velocity at \\(t\\), \\(a\\) is the constant acceleration, \\(s\\) is the displacement and \\(t\\) is the time.",
+        "tags": ["math", "physics", "time", "classical", "kinematics"]
+    }, {
+        "name": "Suvat 5",
+        "latex": "s = \\frac{1}{2}(u+v)t",
+        "description": "Where \\(v\\) is the velocity at \\(t\\), \\(u\\) is the velocity at \\(t=0\\), \\(s\\) is the displacement and \\(t\\) is the time.",
+        "tags": ["math", "physics", "time", "classical", "kinematics"]
+    }, {
+        "name": "Velocity against displacement",
+        "latex": "v(t)=x'(t)\\therefore x(t)=\\int_0^t v(a)\\mathrm da \\therefore x=\\int v(t)\\mathrm dt",
+        "description": "Where \\(v(t)\\) is the velocity at time \\(t\\), and \\(x(t)\\) is the displacement at time \\(t\\)",
+        "tags": ["math", "physics", "time", "classical", "kinematics", "calculus"]
+    }, {
+        "name": "Velocity against acceleration",
+        "latex": "a(t)=v'(t)\\therefore v(t)=\\int_0^t a(x)\\mathrm dx \\therefore v=\\int a(t)\\mathrm dt",
+        "description": "Where \\(v(t)\\) is the velocity at time \\(t\\), and \\(a(t)\\) is the acceleration at time \\(t\\)",
+        "tags": ["math", "physics", "time", "classical", "kinematics", "calculus"]
+    }, {
+        "name": "Gradient of a straight line",
+        "latex": "m=\\frac{\\Delta y}{\\Delta x}=\\frac{y_2-y_1}{x_2-x_1}=\\frac{y_1-y_2}{x_1-x_2}",
+        "description": "Where \\(y=mx+c\\)",
+        "tags": ["math", "line", "geometry", "gradient"]
+    }, {
+        "name": "Area of an sector",
+        "latex": "A=\\frac{\\theta}{360}\\pi r^2",
+        "description": "Where \\(A\\) is the area, \\(\\theta\\) is the sector angle and \\(r\\) is the radius",
+        "tags": ["math", "area", "circle", "radius", "geometry", "sector"]
+    }, {
+        "name": "Perimeter of an sector",
+        "latex": "p=\\frac{\\theta}{360}2\\pi r + 2r",
+        "description": "Where \\(p\\) is the perimeter, \\(\\theta\\) is the sector angle and \\(r\\) is the radius",
+        "tags": ["math", "area", "circle", "radius", "geometry", "sector"]
+    }, {
+        "name": "Sum of interior angles",
+        "latex": "\\theta = 180(n-2)",
+        "description": "Where \\(n\\) is the number of sides of the shape",
+        "tags": ["math", "angle"]
+    }, {
+        "name": "Exterior angle in a regular polygon",
+        "latex": "\\theta = \\frac{360}{n}",
+        "description": "Where \\(n\\) is the number of sides of the polygon",
+        "tags": ["math", "angle"]
+    }, {
+        "name": "Direct proportion",
+        "latex": "\\text{if } x\\propto y \\text{ then } x = ky",
+        "description": "Where \\(k\\) is a constant",
+        "tags": ["math", "proportion"]
+    }, {
+        "name": "Inverse proportion",
+        "latex": "\\text{if } x\\propto \\frac{1}{y} \\text{ then } x = \\frac{k}{y}",
+        "description": "Where \\(k\\) is a constant",
+        "tags": ["math", "proportion"]
+    }, {
+        "name": "Midpoint of two points",
+        "latex": "\\left(\\frac{x_1+x_2}{2},\\frac{y_1+y_2}{2}\\right)",
+        "description": "",
+        "tags": ["math", "geometry", "line"]
+    }, {
+        "name": "Perpendicular gradient",
+        "latex": "m_{\\perp}=-\\frac{1}{m}",
+        "description": "Where \\(y=mx+c\\)",
+        "tags": ["geometry", "math", "line", "gradient"]
+    }, {
+        "name": "Lowest common multiple",
+        "latex": "\\text{LCM}(a, b)=\\frac{a\\times b}{\\text{HCF}(a, b)}",
+        "description": "",
+        "tags": ["math", "factor", "multiple"]
+    }, {
+        "name": "Density, mass, volume",
+        "latex": "\\rho = \\frac{m}{V}",
+        "description": "Where \\(\\rho\\) is the density, \\(m\\) is the mass and \\(V\\) is the volume.",
+        "tags": ["math", "physics", "volume", "mass"]
     }
 ]}

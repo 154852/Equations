@@ -24,7 +24,7 @@
                 <polyline points="0,30 100,60 100,100 0,100" fill="rgb(240, 240, 240)"></polyline>
             </svg>
             <div v-bind:class="{'empty': !listOpen && focused == null, 'searching': listOpen, 'focused': focused != null}">
-                <input type="text" v-model="input" @input="search" @click="focused = null" placeholder="Search for something, e.g: Circles" id="search" />
+                <input type="text" v-model="input" @keyup="search" @click="focused = null" placeholder="Search for something, e.g: Circles" id="search" />
                 <div id="equations">
                     <transition-group name="expand">
                         <div class="equation-preview" v-for="eqn of equations" @click="focus(eqn)" v-bind:key="eqn.id">
